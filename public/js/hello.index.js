@@ -181,6 +181,6 @@ var onWindowMarkerClick = function()
     
     // parameters: service_id, template_id, template_parameters
     emailjs.send("gmail-1985","template_DoU47pm6", 
-    { from_name: "Thanyadol Chantarawong", to_name: "Line Manager", message_html: "" } );
+    { from_name: "Thanyadol Chantarawong", to_name: "Line Manager", message_html: "https://github.com/thanyadol/hello-zf3" } );
            
 }
