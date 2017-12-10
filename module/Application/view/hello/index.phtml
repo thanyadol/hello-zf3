@@ -1,0 +1,45 @@
+
+
+
+
+
+<div class="clearfix"> &nbsp; </div>
+<div class="container" ng-app="helloApplication" >
+
+    <div ng-controller="helloController">
+
+        <h3>{{ helloMessage }}</h3>
+   
+		<hr/>
+
+		<ui-gmap-google-map center="map.center" zoom="map.zoom" draggable="true" options="options" bounds="map.bounds">
+       	 	<ui-gmap-markers models="gmapMarkers" coords="'self'" icon="'icon'" click="onMarkerClick();" >
+
+
+				<ui-gmap-windows show="show" options="windowOptions">
+				
+					<div class="window">
+						<div style="opacity: 1;">
+						I should not be attached to a
+						marker.
+						<div class="">
+							<a class="btn" onclick="onWindowMarkerClick();">CLICK ME</a>
+						</div>
+						<p>This is an info window at {{ currentLong }}, {{ currentLat }}!</p>
+
+						<p class="muted">My marker will stay open when the window is popped up!</p>
+					</div></div>
+				
+				</ui-gmap-windows>
+			
+        	</ui-gmap-markers>
+    	</ui-gmap-google-map>
+
+		<hr/>
+		<p><a class="btn btn-primary" href="#" role="button"><?=$this->translate('Submit');?></a></p>
+    </div>
+   
+ </div>
+
+
+ <!--<div id="map"></div>-->
