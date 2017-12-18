@@ -47,6 +47,24 @@ return array(
                     ),
                 ),
             ),
+
+            'test' => array(
+                'type' => 'Segment',
+                'options' => array(
+                    'route'    => '/test/[:lang/[:action[/][:id/]]]',
+                    'constraints' => array(
+                        'lang'   => '[a-zA-Z]*',
+                        'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                        'id' => '[0-9_-]*[a-zA-Z0-9_-]*',
+                    ),
+                    'defaults' => array(
+                        'controller' => 'Application\Controller\Test',
+                        'action' => 'index',
+                        'id' => '',
+                        'lang' => 'th',
+                    ),
+                ),
+            ),
         ),
     ),
     'service_manager' => array(
@@ -73,6 +91,7 @@ return array(
             //add controller
             'Application\Controller\Index' => 'Application\Controller\IndexController',
             'Application\Controller\Hello' => 'Application\Controller\HelloController',
+            'Application\Controller\Test' => 'Application\Controller\TestController',
         ),
     ),
      
@@ -85,6 +104,9 @@ return array(
             'application/index/user' => __DIR__ . '/../view/index/user.phtml',
 
             'application/hello/index' => __DIR__ . '/../view/hello/index.phtml',
+
+            //map path
+            'application/test/index' => __DIR__ . '/../view/test/index.phtml',
 
 
             #layout

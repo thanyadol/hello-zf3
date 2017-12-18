@@ -21,3 +21,13 @@ html, body {
   max-height: 454px; 
   max-width: 649px;
 }
+
+.green {
+
+  color: forestgreen;
+}
+
+.red
+{
+  color:  crimson;
+}
